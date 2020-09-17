@@ -1,0 +1,7 @@
+venv/
+app.log
+app.error.log
+app.warning.log
+.idea/
+__pycache__/
+the_right_characters.csv

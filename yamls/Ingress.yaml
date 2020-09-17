@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: rickandmorty
+  annotations:
+#    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  rules:
+    - host: rickandmorty.info
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: rickmorty
+              servicePort: 8080
